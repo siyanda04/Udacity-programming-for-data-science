@@ -261,8 +261,8 @@ def raw_data(df, mark_place):
 
     # this variable holds where the user last stopped
     if mark_place > 0:
-        last_place = choice("\nWould you like to continue from where you "
-                            "stopped last time? \n [y] Yes\n [n] No\n\n>")
+        last_place = choice("\nWould you like to continue from where "
+                            "you left off last time? \n [y] Yes\n [n] No\n\n>")
         if last_place == 'n':
             mark_place = 0
 
