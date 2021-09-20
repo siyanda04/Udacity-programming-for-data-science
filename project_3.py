@@ -33,7 +33,7 @@ def choice(prompt, choices=('y', 'n')):
             if list(filter(lambda x: x in choices, choice)) == choice:
                 break
 
-        prompt = ("\nSomething is not right. Please mind the formatting and "
+        prompt = ("\nInvalid inputs, try again. Please mind the formatting and "
                   "be sure to enter a valid option:\n>")
 
     return choice
@@ -62,15 +62,15 @@ def get_filters():
                      "data? Use commas to list the names.\n>", weekdays)
 
         # confirm the user input
-        confirmation = choice("\nPlease confirm that you would like to apply "
-                              "the following filter(s) to the bikeshare data."
+        confirmation = choice("\nPlease confirm that you would like to proceed "
+                              "with the following filter(s) to the bikeshare data."
                               "\n\n City(ies): {}\n Month(s): {}\n Weekday(s)"
                               ": {}\n\n [y] Yes\n [n] No\n\n>"
                               .format(city, month, day))
         if confirmation == 'y':
             break
         else:
-            print("\nLet's try this again!")
+            print("\nTry this again!")
 
     print('-'*40)
     return city, month, day
